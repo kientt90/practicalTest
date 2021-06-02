@@ -15,10 +15,10 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
-public class Employee {
+public class Employees {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private Double salary;
+    private Double wage;
 }

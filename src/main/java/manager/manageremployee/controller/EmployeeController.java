@@ -1,6 +1,6 @@
 package manager.manageremployee.controller;
 
-import manager.manageremployee.entity.Employee;
+import manager.manageremployee.entity.Employees;
 import manager.manageremployee.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,11 +16,11 @@ public class EmployeeController {
     @Autowired
     EmployeeRepository employeeRepository;
     @RequestMapping(method = RequestMethod.POST)
-    public Employee creatEmployee(@RequestBody Employee employee){
+    public Employees createEmployee(@RequestBody Employees employee){
         return employeeRepository.save(employee);
     }
     @RequestMapping(method = RequestMethod.GET)
-    public List<Employee> list(){
+    public List<Employees> findAllEmployees(){
         return employeeRepository.findAll();
     }
 
